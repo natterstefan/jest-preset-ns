@@ -1,0 +1,60 @@
+const { dirname } = require('path')
+
+const babelJest = require('babel-jest')
+
+module.exports = babelJest.createTransformer({
+  presets: [
+    [
+      // typescript support
+      '@babel/preset-typescript',
+      // smart preset that allows you to use the latest JavaScript
+      '@babel/preset-env',
+      {
+        modules: 'commonjs',
+        useBuiltIns: 'usage',
+        // compile against the current node version
+        targets: { node: 'current' },
+      },
+    ],
+    // babel preset for all React plugins
+    '@babel/preset-react',
+  ],
+  plugins: [pluginRenameCoreJS, '@babel/plugin-proposal-class-properties'],
+  babelrc: false,
+})
+
+/**
+ * alias core-js in jest-preset to correct version
+ * @see https://github.com/xing/hops/pull/969
+ */
+function pluginRenameCoreJS() {
+  function replaceSource(source) {
+    // eslint-disable-next-line no-param-reassign
+    source.value = source.value.replace(
+      /^core-js/,
+      dirname(require.resolve('core-js/package.json')),
+    )
+  }
+
+  function isRequire(path) {
+    if (!path.get('callee').isIdentifier({ name: 'require' })) return false
+    if (path.node.arguments.length === 0) return false
+    if (!path.get('arguments.0').isStringLiteral()) return false
+    return true
+  }
+
+  const visitor = {
+    ImportDeclaration(path) {
+      replaceSource(path.node.source)
+    },
+    CallExpression(path) {
+      if (isRequire(path)) {
+        replaceSource(path.node.arguments[0])
+      }
+    },
+  }
+
+  return {
+    visitor,
+  }
+}
