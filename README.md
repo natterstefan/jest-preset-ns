@@ -60,6 +60,12 @@ This package is compatible only with React 16+.
 - [extend and adjust ts configuration][1]
 - [prevent logging all the JSDOM internal errors](https://gist.github.com/natterstefan/8294b498afa35723ca92f3bf8451e533#file-jest-setup-ts)
 
+## How to Publish
+
+```bash
+yarn publish-minor # or publish-major or publish-patch
+```
+
 ## References
 
 - [jest getting-started](https://jestjs.io/docs/en/22.x/getting-started.html)
