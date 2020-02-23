@@ -1,17 +1,17 @@
 # jest-preset-ns
 
-A [Jest preset](https://facebook.github.io/jest/docs/configuration.html#preset-string)
-that makes it easier for me to use Jest. :D
+An opinionated [Jest preset](https://facebook.github.io/jest/docs/configuration.html#preset-string)
+for both react and non-react projects.
 
-It comes with both babel and typescript support at the same time, there's no
-way to get just one of them right now.
+It comes with two default presets with both babel and typescript support.
 
 ## Features
 
-- looks for tests in `__tests__` and for `*.(spec|test).[jt]s(x)?` files
+- default preset and preset for react are available
 - modern javascript (babel) and typescript (ts-jest) support
 - mocks files (eg. png, gif, jpg, ...) and date ([jest-date-mock][2])
   automatically
+- looks for tests in `__tests__` and for `*.(spec|test).[jt]s(x)?` files
 - easy extendable
 
 ## Installation
@@ -41,6 +41,7 @@ to your Jest config. This can be done by adding it to your `package.json` or
 // jest.config.js
 module.exports = {
   preset: 'jest-preset-ns',
+  // or: preset: 'jest-preset-ns/presets/default'
   // [...]
 }
 ```
@@ -61,7 +62,8 @@ For running tests, use the [Jest CLI](https://jestjs.io/docs/en/cli).
 - [ts-jest preset][1] ([ts-jest presets source](https://github.com/kulshekhar/ts-jest/tree/v25.2.0/presets),
   [ts-jest config source](https://github.com/kulshekhar/ts-jest/tree/v25.2.0/src/config))
 - [jest defaults](https://github.com/facebook/jest/blob/v25.1.0/packages/jest-config/src/Defaults.ts)
-- [example jest-preset](https://github.com/xing/hops/blob/v12.1.1/packages/jest-preset)
+- [hops jest-preset](https://github.com/xing/hops/blob/v12.1.1/packages/jest-preset)
+- [amex-jest-preset-react](https://github.com/americanexpress/amex-jest-preset-react/tree/v6.0.0)
 
 [1]: https://kulshekhar.github.io/ts-jest/user/config/
 [2]: https://www.npmjs.com/package/jest-date-mock
