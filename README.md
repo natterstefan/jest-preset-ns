@@ -1,5 +1,8 @@
 # jest-preset-ns
 
+[![npm version](https://badge.fury.io/js/jest-preset-ns.svg)](https://badge.fury.io/js/jest-preset-ns)
+[![Build Status](https://travis-ci.com/natterstefan/jest-preset-ns.svg?branch=master)](https://travis-ci.com/natterstefan/jest-preset-ns)
+
 An opinionated [Jest preset](https://facebook.github.io/jest/docs/configuration.html#preset-string)
 for both react and non-react projects.
 
