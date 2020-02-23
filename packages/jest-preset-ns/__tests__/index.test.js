@@ -8,7 +8,7 @@ describe('jest-preset-ns', () => {
     automock: false,
     bail: 0,
     browser: false,
-    cache: true,
+    cache: expect.any(Boolean),
     cacheDirectory: expect.any(String),
     changedFilesWithAncestor: false,
     clearMocks: false,

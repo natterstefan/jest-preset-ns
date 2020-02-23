@@ -55,12 +55,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn lint"
     }
   },
   "lint-staged": {
     "*.js": [
-      "yarn run lint",
+      "yarn lint",
       "prettier --write",
       "git update-index --again",
       "jest --findRelatedTests"

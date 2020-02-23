@@ -9,4 +9,5 @@ module.exports = {
   modulePaths: ['<rootDir>'],
   name: pack.name,
   rootDir: '.',
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
 }
