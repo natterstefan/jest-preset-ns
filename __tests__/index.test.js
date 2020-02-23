@@ -40,7 +40,7 @@ describe('jest-preset-ns', () => {
         'mocks/file.js',
       ),
     },
-    modulePathIgnorePatterns: [],
+    modulePathIgnorePatterns: ['npm-cache', '.npm'],
     noStackTrace: false,
     notify: false,
     notifyMode: 'failure-change',
@@ -55,7 +55,7 @@ describe('jest-preset-ns', () => {
     setupFilesAfterEnv: [],
     skipFilter: false,
     snapshotSerializers: [],
-    testEnvironment: 'jest-environment-jsdom',
+    testEnvironment: 'node',
     testEnvironmentOptions: {},
     testFailureExitCode: 1,
     testLocationInResults: false,
@@ -96,6 +96,11 @@ describe('jest-preset-ns', () => {
         moduleNameMapper: {
           '\\.(css|scss)$': 'identity-obj-proxy',
         },
+        setupFilesAfterEnv: [
+          expect.stringContaining('presets/react/jest-setup.js'),
+        ],
+        snapshotSerializers: ['enzyme-to-json/serializer'],
+        testEnvironment: 'jest-environment-jsdom',
       }),
     )
   })

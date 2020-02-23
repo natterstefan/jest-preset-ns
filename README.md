@@ -51,6 +51,10 @@ own settings.
 
 For running tests, use the [Jest CLI](https://jestjs.io/docs/en/cli).
 
+## Compatibility
+
+This package is compatible only with React 16+.
+
 ## Helpful tips
 
 - [extend and adjust ts configuration][1]
@@ -63,6 +67,7 @@ For running tests, use the [Jest CLI](https://jestjs.io/docs/en/cli).
   [ts-jest config source](https://github.com/kulshekhar/ts-jest/tree/v25.2.0/src/config))
 - [jest defaults](https://github.com/facebook/jest/blob/v25.1.0/packages/jest-config/src/Defaults.ts)
 - [hops jest-preset](https://github.com/xing/hops/blob/v12.1.1/packages/jest-preset)
+- [amex-jest-preset](https://github.com/americanexpress/amex-jest-preset/tree/v6.0.0)
 - [amex-jest-preset-react](https://github.com/americanexpress/amex-jest-preset-react/tree/v6.0.0)
 
 [1]: https://kulshekhar.github.io/ts-jest/user/config/
