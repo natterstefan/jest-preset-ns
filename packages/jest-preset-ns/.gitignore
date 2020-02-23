@@ -114,3 +114,7 @@ dist
 
 # jest cache
 .jest-cache
+
+# CHANGELOG and README (will be taken from root)
+CHANGELOG.md
+README.md

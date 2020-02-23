@@ -1,3 +1,7 @@
+/**
+ * TODO:
+ * - add: testEnvironment: 'jest-environment-jsdom-global',
+ */
 const createPreset = require('../create-jest-preset')
 
 const config = createPreset({

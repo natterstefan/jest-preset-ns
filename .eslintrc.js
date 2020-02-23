@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   extends: ['eslint-config-ns'],
   rules: {
@@ -15,6 +17,9 @@ module.exports = {
   ],
   settings: {
     'import/resolver': {
+      'eslint-import-resolver-lerna': {
+        packages: path.resolve(__dirname, 'packages'),
+      },
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
       },
