@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "lint": "FORCE_COLOR=1 lerna run lint --stream",
+    "prepublishOnly": "copyfiles README.md CHANGELOG.md packages/jest-preset-ns/",
     "test": "FORCE_COLOR=1 lerna run test --stream",
     "test-app": "FORCE_COLOR=1 lerna run test --scope example-app* --stream"
   },
@@ -28,6 +29,7 @@
     "@types/react": "^16.9.22",
     "@types/react-dom": "^16.9.5",
     "babel-eslint": "10.0.3",
+    "copyfiles": "^2.2.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-ns": "1.1.0",

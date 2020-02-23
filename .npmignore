@@ -1,0 +1,16 @@
+# OS, IDE, ...
+.DS_Store
+.vscode
+
+# tests, coverage and example apps
+__test__
+__tests__
+*.test.js
+coverage
+**/example-app
+**/example-app-react
+
+# logs and development
+*.log
+.coveralls.yml
+tmp
