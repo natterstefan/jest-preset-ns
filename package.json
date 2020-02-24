@@ -8,11 +8,11 @@
   "scripts": {
     "lint": "FORCE_COLOR=1 lerna run lint --stream",
     "prepublishOnly": "copyfiles README.md packages/jest-preset-ns/",
-    "test": "FORCE_COLOR=1 lerna run test --stream",
-    "test-app": "FORCE_COLOR=1 lerna run test --scope example-app* --stream",
     "publish-major": "lerna publish --no-push major",
     "publish-minor": "lerna publish --no-push minor",
-    "publish-patch": "lerna publish --no-push patch"
+    "publish-patch": "lerna publish --no-push patch",
+    "test": "FORCE_COLOR=1 lerna run test --stream",
+    "test-app": "FORCE_COLOR=1 lerna run test --scope example-app* --stream"
   },
   "workspaces": {
     "packages": [

@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "main": "jest-preset.js",
   "engines": {
-    "node": "^10.13 || ^12.11 || ^13.0"
+    "node": "^10.16 || ^12.11 || ^13.0"
   },
   "files": [
     "jest-preset.js",

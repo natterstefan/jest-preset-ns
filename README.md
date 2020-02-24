@@ -62,6 +62,7 @@ This package is compatible only with React 16+.
 
 - [extend and adjust ts configuration][1]
 - [prevent logging all the JSDOM internal errors](https://gist.github.com/natterstefan/8294b498afa35723ca92f3bf8451e533#file-jest-setup-ts)
+- [jest-enzyme](https://github.com/FormidableLabs/enzyme-matchers/tree/master/packages/jest-enzyme)
 
 ## How to Publish
 
