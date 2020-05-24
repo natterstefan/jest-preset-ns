@@ -7,17 +7,16 @@ describe('jest-preset-ns', () => {
   const defaultPreset = {
     automock: false,
     bail: 0,
-    browser: false,
     cache: expect.any(Boolean),
     cacheDirectory: expect.any(String),
     changedFilesWithAncestor: false,
     clearMocks: false,
     collectCoverage: false,
     collectCoverageFrom: [
-      'src/**/*.{js,jsx,ts,tsx}',
       '!**/node_modules/**',
       '!src/**/*.dt.ts',
       '!src/**/(__mocks__|__stories__|__tests__)/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}',
     ],
     coveragePathIgnorePatterns: ['/node_modules/'],
     coverageProvider: 'babel',
@@ -28,7 +27,6 @@ describe('jest-preset-ns', () => {
     globals: {},
     haste: {
       computeSha1: false,
-      providesModuleNodeModules: [],
       throwOnModuleCollision: false,
     },
     maxConcurrency: 5,
@@ -65,7 +63,9 @@ describe('jest-preset-ns', () => {
       '**/__tests__/**/*.[jt]s(x)?',
       '**/?(*.)+(spec|test).[jt]s(x)?',
     ],
-    testPathIgnorePatterns: ['<rootDir>/(dist|es|esm|lib|node_modules|tmp)/'],
+    testPathIgnorePatterns: [
+      '<rootDir>/(build|dist|es|esm|lib|node_modules|tmp)/',
+    ],
     testRegex: [],
     testRunner: 'jasmine2',
     testSequencer: '@jest/test-sequencer',

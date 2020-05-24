@@ -1,3 +1,7 @@
+/**
+ * inspired by
+ * @see https://github.com/xing/hops/blob/1fbd3fcb4b389efee2f458d4285f52753a553ba2/packages/jest-preset/transforms/babel.js
+ */
 const { dirname } = require('path')
 
 const babelJest = require('babel-jest')
@@ -12,7 +16,8 @@ module.exports = babelJest.createTransformer({
       {
         modules: 'commonjs',
         useBuiltIns: 'usage',
-        corejs: 3, // keep in sync with version in package.json
+        // keep in sync with version in package.json
+        corejs: '3.6',
         // compile against the current node version
         targets: { node: 'current' },
       },

@@ -14,10 +14,10 @@ const config = merge({}, defaults, {
   // useful as it eliminates issues caused by several projects sharing the same Jest cache on CI builds
   cacheDirectory: '<rootDir>/.jest-cache',
   collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
     '!**/node_modules/**',
     '!src/**/*.dt.ts',
     '!src/**/(__mocks__|__stories__|__tests__)/*.{js,jsx,ts,tsx}',
+    'src/**/*.{js,jsx,ts,tsx}',
   ],
   // examples: https://github.com/xing/hops/blob/v12.1.1/packages/jest-preset/jest-preset.js#L4-L11
   moduleNameMapper: {
@@ -38,7 +38,9 @@ const config = merge({}, defaults, {
     '**/__tests__/**/*.[jt]s(x)?',
     '**/?(*.)+(spec|test).[jt]s(x)?',
   ],
-  testPathIgnorePatterns: ['<rootDir>/(dist|es|esm|lib|node_modules|tmp)/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/(build|dist|es|esm|lib|node_modules|tmp)/',
+  ],
   transform: {
     '^.+\\.(js|jsx|mjs)$': require.resolve('../transforms/babel.js'),
     '^.+\\.(ts|tsx)$': 'ts-jest',
