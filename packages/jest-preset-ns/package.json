@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "main": "jest-preset.js",
   "engines": {
-    "node": "^10.16 || ^12.11 || ^13.0"
+    "node": ">=10.16"
   },
   "files": [
     "jest-preset.js",
@@ -30,28 +30,27 @@
   },
   "homepage": "https://github.com/natterstefan/jest-preset-ns#readme",
   "peerDependencies": {
-    "jest": "^25.1.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "jest": "^26.0.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.3",
-    "@babel/preset-typescript": "^7.8.3",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^25.1.0",
-    "core-js": "^3.6.4",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "babel-jest": "^26.0.1",
+    "core-js": "^3.6.5",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "identity-obj-proxy": "^3.0.0",
     "is-ci": "^2.0.0",
-    "jest-config": "^25.1.0",
+    "jest-config": "^26.0.1",
     "jest-date-mock": "^1.0.8",
     "lodash.merge": "^4.6.2",
-    "regenerator-runtime": "^0.13.3",
-    "ts-jest": "^25.2.1"
+    "regenerator-runtime": "^0.13.5",
+    "ts-jest": "^26.0.0"
   }
 }
