@@ -1,11 +1,10 @@
-const { configure, mount, render, shallow } = require('enzyme')
-const Adapter = require('enzyme-adapter-react-16')
+const { configure } = require('enzyme')
+/**
+ * unofficial React@17 adapter, until the offical one is released
+ *
+ * @see https://github.com/enzymejs/enzyme/issues/2429#issuecomment-831006991
+ * @see https://github.com/enzymejs/enzyme/pull/2430
+ */
+const Adapter = require('@wojtekmaj/enzyme-adapter-react-17')
 
-// Setup Enzyme Adapter
 configure({ adapter: new Adapter() })
-
-// TODO: add to docs
-// add enzyme methods to global scope
-global.shallow = shallow
-global.mount = mount
-global.render = render
