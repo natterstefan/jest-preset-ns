@@ -47,7 +47,7 @@
     "enzyme-to-json": "^3.6.2",
     "identity-obj-proxy": "^3.0.0",
     "is-ci": "^3.0.0",
-    "jest-config": "^26.0.1",
+    "jest-config": "^27.0.6",
     "jest-date-mock": "^1.0.8",
     "lodash.merge": "^4.6.2",
     "regenerator-runtime": "^0.13.9",
