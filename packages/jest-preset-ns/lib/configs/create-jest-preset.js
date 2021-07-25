@@ -6,8 +6,20 @@
  * @see https://github.com/americanexpress/amex-jest-preset/blob/v6.0.0/jest-preset.js
  */
 const isCI = require('is-ci')
-const { defaults } = require('jest-config')
+const semver = require('semver')
+const colors = require('colors')
 const merge = require('lodash.merge')
+const { defaults } = require('jest-config')
+const jestVersion = require('jest/package.json').version
+
+if (semver.lt(jestVersion, '27.0.0')) {
+  // eslint-disable-next-line no-console
+  console.log(
+    colors.red(
+      'Error: You are using an unsupported version of Jest! Please upgrade to Jest v27.',
+    ),
+  )
+}
 
 const config = merge({}, defaults, {
   cache: !isCI,
