@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    commit-message:
+      prefix: 'chore'
+  - package-ecosystem: 'npm'
+    directory: '/packages/example-app'
+    schedule:
+      interval: 'monthly'
+    commit-message:
+      prefix: 'chore'
+  - package-ecosystem: 'npm'
+    directory: '/packages/example-app-react'
+    schedule:
+      interval: 'monthly'
+    commit-message:
+      prefix: 'chore'
+  - package-ecosystem: 'npm'
+    directory: '/packages/jest-preset-ns'
+    schedule:
+      interval: 'monthly'
+    commit-message:
+      prefix: 'chore'
