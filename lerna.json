@@ -1,23 +1,18 @@
 {
   "npmClient": "yarn",
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "command": {
     "create": {
       "author": "Stefan Natter (https://natterstefan.me)",
       "license": "Apache-2.0"
     },
     "version": {
-      "allowBranch": "master",
+      "allowBranch": "main",
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
   },
-  "ignoreChanges": [
-    "**/__tests__/**",
-    "**/*.md"
-  ],
+  "ignoreChanges": ["**/__tests__/**", "**/*.md"],
   "useWorkspaces": true,
   "version": "0.2.0"
 }
