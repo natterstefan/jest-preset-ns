@@ -1,7 +1,3 @@
-/**
- * TODO:
- * - add: testEnvironment: 'jest-environment-jsdom-global',
- */
 const createPreset = require('../create-jest-preset')
 
 const config = createPreset({
@@ -22,6 +18,7 @@ const config = createPreset({
    * setupFilesAfterEnv: ['jest-preset-ns/presets/react/jest-setup.js'],
    */
   setupFilesAfterEnv: [require.resolve('../../../presets/react/jest-setup.js')],
+  // TODO: use testEnvironment: 'jest-environment-jsdom-global' instead?
   testEnvironment: 'jest-environment-jsdom',
 })
 

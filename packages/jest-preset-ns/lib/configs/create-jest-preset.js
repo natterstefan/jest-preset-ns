@@ -4,12 +4,34 @@
  *
  * partially inspired by
  * @see https://github.com/americanexpress/amex-jest-preset/blob/v6.0.0/jest-preset.js
+ * @see https://github.com/xing/hops/blob/4cfaba925984ea89ce520a3ddc9ea9810b10721b/packages/jest-preset/jest-preset.js
  */
 const isCI = require('is-ci')
-const { defaults } = require('jest-config')
+const semver = require('semver')
+const colors = require('colors')
 const merge = require('lodash.merge')
+const importFrom = require('import-from')
+const jestVersion = require('jest/package.json').version
 
-const config = merge({}, defaults, {
+// returns undefined instead of throwing when the module can't be found.
+const jestConfig = importFrom.silent(require.resolve('jest'), 'jest-config')
+
+if (!jestConfig) {
+  throw new Error(
+    colors.red('Could not initialize jest-preset-ns. jest-config is missing.'),
+  )
+}
+
+if (semver.lt(jestVersion, '27.0.0')) {
+  // eslint-disable-next-line no-console
+  console.log(
+    colors.red(
+      'Error: You are using an unsupported version of Jest! Please upgrade to Jest v27.',
+    ),
+  )
+}
+
+const config = merge({}, jestConfig.defaults, {
   cache: !isCI,
   // useful as it eliminates issues caused by several projects sharing the same Jest cache on CI builds
   cacheDirectory: '<rootDir>/.jest-cache',
@@ -33,7 +55,7 @@ const config = merge({}, defaults, {
   // @see https://github.com/americanexpress/amex-jest-preset
   testEnvironment: 'node',
   testMatch: [
-    ...defaults.testMatch,
+    ...jestConfig.defaults.testMatch,
     // add typescript support
     '**/__tests__/**/*.[jt]s(x)?',
     '**/?(*.)+(spec|test).[jt]s(x)?',
