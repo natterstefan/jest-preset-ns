@@ -1,6 +1,6 @@
 {
   "name": "example-app-react",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "private": true,
@@ -13,7 +13,7 @@
   "dependencies": {
     "enzyme": "^3.11.0",
     "jest": "^27.0.6",
-    "jest-preset-ns": "^0.2.0",
+    "jest-preset-ns": "^1.0.0",
     "react": "^17.0.2"
   }
 }
