@@ -1,6 +1,9 @@
 const createPreset = require('../create-jest-preset')
 
-const config = createPreset({
+/**
+ * @type {import('@jest/types').Config.InitialOptions}
+ */
+const jestReactConfig = {
   moduleNameMapper: {
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
@@ -20,6 +23,8 @@ const config = createPreset({
   setupFilesAfterEnv: [require.resolve('../../../presets/react/jest-setup.js')],
   // TODO: use testEnvironment: 'jest-environment-jsdom-global' instead?
   testEnvironment: 'jest-environment-jsdom',
-})
+}
+
+const config = createPreset(jestReactConfig)
 
 module.exports = config

@@ -31,7 +31,10 @@ if (semver.lt(jestVersion, '27.0.0')) {
   )
 }
 
-const config = merge({}, jestConfig.defaults, {
+/**
+ * @type {import('@jest/types').Config.InitialOptions}
+ */
+const jestPresetConfig = {
   cache: !isCI,
   // useful as it eliminates issues caused by several projects sharing the same Jest cache on CI builds
   cacheDirectory: '<rootDir>/.jest-cache',
@@ -66,7 +69,9 @@ const config = merge({}, jestConfig.defaults, {
     '^.+\\.(js|jsx|mjs)$': require.resolve('../transforms/babel.js'),
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-})
+}
+
+const config = merge({}, jestConfig.defaults, jestPresetConfig)
 
 const createPreset = options => merge({}, config, options)
 
