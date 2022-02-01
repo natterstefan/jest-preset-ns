@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": "^14.17 || ^16.x"
+  },
   "scripts": {
     "test": "jest --silent"
   },
