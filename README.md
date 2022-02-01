@@ -74,6 +74,7 @@ yarn lerna:version
 
 # create the changelog entry
 npx lerna-changelog --from <tag> --to <tag>
+git add CHANGELOG.md && git commit -m "chore: updated CHANGELOG"
 
 # push the tags and the changelog update
 git push --follow-tags
