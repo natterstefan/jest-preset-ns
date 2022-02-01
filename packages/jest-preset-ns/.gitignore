@@ -114,6 +114,3 @@ dist
 
 # jest cache
 .jest-cache
-
-# README will be taken from root
-packages/*/LICENSE
