@@ -14,7 +14,7 @@
       "allowBranch": ["main", "next"]
     },
     "publish": {
-      "allowBranch": ["master", "next"],
+      "allowBranch": ["main", "next"],
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
