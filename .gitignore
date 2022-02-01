@@ -114,3 +114,6 @@ dist
 
 # jest cache
 .jest-cache
+
+# README will be taken from root in an npm script
+packages/*/LICENSE

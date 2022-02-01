@@ -11,12 +11,11 @@
   "scripts": {
     "lint": "FORCE_COLOR=1 lerna run lint --stream",
     "prepare": "is-ci || husky install",
-    "prepublishOnly": "copyfiles README.md packages/jest-preset-ns/",
-    "publish-major": "lerna publish --no-push major",
-    "publish-minor": "lerna publish --no-push minor",
-    "publish-patch": "lerna publish --no-push patch",
+    "prelerna:publish": "copyfiles LICENSE README.md packages/jest-preset-ns/",
     "test": "FORCE_COLOR=1 lerna run test --stream",
-    "test-app": "FORCE_COLOR=1 lerna run test --scope example-app* --stream"
+    "test-app": "FORCE_COLOR=1 lerna run test --scope example-app* --stream",
+    "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
+    "lerna:publish": "lerna publish from-package"
   },
   "workspaces": {
     "packages": [
