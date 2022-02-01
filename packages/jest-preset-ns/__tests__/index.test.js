@@ -82,7 +82,7 @@ describe('jest-preset-ns', () => {
     timers: 'real',
     transform: {
       '^.+\\.(js|jsx|mjs)$': expect.stringContaining('transforms/babel.js'),
-      '^.+\\.(gql|graphql)$': 'jest-transform-graphql',
+      '^.+\\.(gql|graphql)$': expect.stringContaining('transforms/graphql.js'),
       '^.+\\.(ts|tsx)$': 'ts-jest',
     },
     transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],

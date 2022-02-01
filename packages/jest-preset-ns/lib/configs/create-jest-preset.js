@@ -67,10 +67,7 @@ const jestPresetConfig = {
   ],
   transform: {
     '^.+\\.(js|jsx|mjs)$': require.resolve('../transforms/babel.js'),
-    // TODO: try different package https://github.com/xing/hops/blob/0bdc95027ebea6ea6f73e21fecdfb80fa13f85ba/packages/jest-preset/transforms/graphql.js#L4
-    // NOTE: alternatively one could first detect if the current project uses
-    // graphql and only then use the resolver (https://github.com/xing/hops/blob/1c6213b5be5517c938b870202dee170e942b9d67/packages/jest-preset/jest-preset.js#L52)
-    '^.+\\.(gql|graphql)$': 'jest-transform-graphql',
+    '^.+\\.(gql|graphql)$': require.resolve('../transforms/graphql.js'),
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
 }
