@@ -43,9 +43,8 @@ const config = merge({}, jestConfig.defaults, {
   ],
   // examples: https://github.com/xing/hops/blob/v12.1.1/packages/jest-preset/jest-preset.js#L4-L11
   moduleNameMapper: {
-    '^.+\\.(png|gif|jpe?g|webp|html|svg|((o|t)tf)|woff2?|ico)$': require.resolve(
-      '../mocks/file.js',
-    ),
+    '^.+\\.(png|gif|jpe?g|webp|html|svg|((o|t)tf)|woff2?|ico)$':
+      require.resolve('../mocks/file.js'),
   },
   // prevents issues on CI server where npm-cache may be shared across build workspaces
   modulePathIgnorePatterns: ['npm-cache', '.npm'],
