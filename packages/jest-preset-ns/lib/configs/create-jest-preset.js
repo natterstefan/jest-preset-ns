@@ -67,6 +67,7 @@ const jestPresetConfig = {
   ],
   transform: {
     '^.+\\.(js|jsx|mjs)$': require.resolve('../transforms/babel.js'),
+    '^.+\\.(gql|graphql)$': require.resolve('../transforms/graphql.js'),
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
 }
