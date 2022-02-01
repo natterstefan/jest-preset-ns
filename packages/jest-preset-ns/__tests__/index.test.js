@@ -42,9 +42,8 @@ describe('jest-preset-ns', () => {
     moduleDirectories: ['node_modules'],
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
     moduleNameMapper: {
-      '^.+\\.(png|gif|jpe?g|webp|html|svg|((o|t)tf)|woff2?|ico)$': expect.stringContaining(
-        'mocks/file.js',
-      ),
+      '^.+\\.(png|gif|jpe?g|webp|html|svg|((o|t)tf)|woff2?|ico)$':
+        expect.stringContaining('mocks/file.js'),
     },
     modulePathIgnorePatterns: ['npm-cache', '.npm'],
     noStackTrace: false,

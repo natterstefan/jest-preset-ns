@@ -4,6 +4,8 @@
  */
 const { dirname } = require('path')
 
+// TODO: test if https://github.com/xing/hops/commit/e50c5955ab3c54f57cfd08bc4b2689da3b8ddce0 is
+// required as well
 const babelJest = require('babel-jest').default
 
 module.exports = babelJest.createTransformer({
@@ -17,7 +19,7 @@ module.exports = babelJest.createTransformer({
         modules: 'commonjs',
         useBuiltIns: 'usage',
         // keep in sync with version in package.json
-        corejs: '3.6',
+        corejs: '3.21',
         // compile against the current node version
         targets: { node: 'current' },
       },

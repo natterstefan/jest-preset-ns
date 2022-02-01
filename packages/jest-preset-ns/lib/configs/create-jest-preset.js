@@ -31,7 +31,10 @@ if (semver.lt(jestVersion, '27.0.0')) {
   )
 }
 
-const config = merge({}, jestConfig.defaults, {
+/**
+ * @type {import('@jest/types').Config.InitialOptions}
+ */
+const jestPresetConfig = {
   cache: !isCI,
   // useful as it eliminates issues caused by several projects sharing the same Jest cache on CI builds
   cacheDirectory: '<rootDir>/.jest-cache',
@@ -43,9 +46,8 @@ const config = merge({}, jestConfig.defaults, {
   ],
   // examples: https://github.com/xing/hops/blob/v12.1.1/packages/jest-preset/jest-preset.js#L4-L11
   moduleNameMapper: {
-    '^.+\\.(png|gif|jpe?g|webp|html|svg|((o|t)tf)|woff2?|ico)$': require.resolve(
-      '../mocks/file.js',
-    ),
+    '^.+\\.(png|gif|jpe?g|webp|html|svg|((o|t)tf)|woff2?|ico)$':
+      require.resolve('../mocks/file.js'),
   },
   // prevents issues on CI server where npm-cache may be shared across build workspaces
   modulePathIgnorePatterns: ['npm-cache', '.npm'],
@@ -67,7 +69,9 @@ const config = merge({}, jestConfig.defaults, {
     '^.+\\.(js|jsx|mjs)$': require.resolve('../transforms/babel.js'),
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-})
+}
+
+const config = merge({}, jestConfig.defaults, jestPresetConfig)
 
 const createPreset = options => merge({}, config, options)
 
