@@ -116,4 +116,4 @@ dist
 .jest-cache
 
 # README will be taken from root
-README.md
+packages/*/LICENSE
