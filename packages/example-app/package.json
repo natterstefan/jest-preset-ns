@@ -17,7 +17,7 @@
     "enzyme": "^3.11.0",
     "graphql": "^16.3.0",
     "graphql-tag": "^2.12.6",
-    "jest": "^27.4.7",
+    "jest": "^27.5.1",
     "jest-preset-ns": "^1.1.0"
   }
 }
