@@ -13,7 +13,12 @@ const merge = require('lodash.merge')
 const importFrom = require('import-from')
 const jestVersion = require('jest/package.json').version
 
-// returns undefined instead of throwing when the module can't be found.
+/**
+ * Returns undefined instead of throwing when the module can't be found.
+ *
+ * TODO: find proper type
+ * @type {any}
+ */
 const jestConfig = importFrom.silent(require.resolve('jest'), 'jest-config')
 
 if (!jestConfig) {
@@ -22,11 +27,11 @@ if (!jestConfig) {
   )
 }
 
-if (semver.lt(jestVersion, '27.0.0')) {
+if (semver.lt(jestVersion, '28.0.0')) {
   // eslint-disable-next-line no-console
   console.log(
     colors.red(
-      'Error: You are using an unsupported version of Jest! Please upgrade to Jest v27.',
+      'Error: You are using an unsupported version of Jest! Please upgrade to Jest v28.',
     ),
   )
 }

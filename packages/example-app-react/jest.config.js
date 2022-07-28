@@ -10,6 +10,5 @@ module.exports = {
   preset: 'jest-preset-ns/presets/react',
   displayName: pack.name,
   modulePaths: ['<rootDir>'],
-  name: pack.name,
   rootDir: '.',
 }

@@ -20,6 +20,6 @@ function getLoader() {
 
 module.exports = {
   process(src) {
-    return getLoader().call({ cacheable() {} }, src)
+    return { code: getLoader().call({ cacheable() {} }, src) }
   },
 }
