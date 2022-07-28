@@ -27,12 +27,15 @@ describe('jest-preset-ns', () => {
     errorOnDeprecated: false,
     expand: false,
     extensionsToTreatAsEsm: expect.any(Array),
+    fakeTimers: {
+      enableGlobally: false,
+    },
     forceCoverageMatch: [],
     globals: {},
     haste: {
       computeSha1: false,
       enableSymlinks: false,
-      forceNodeFilesystemAPI: false,
+      forceNodeFilesystemAPI: true,
       throwOnModuleCollision: false,
     },
     injectGlobals: true,
@@ -40,7 +43,16 @@ describe('jest-preset-ns', () => {
     maxConcurrency: 5,
     maxWorkers: '50%',
     moduleDirectories: ['node_modules'],
-    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
+    moduleFileExtensions: [
+      'js',
+      'mjs',
+      'cjs',
+      'jsx',
+      'ts',
+      'tsx',
+      'json',
+      'node',
+    ],
     moduleNameMapper: {
       '^.+\\.(png|gif|jpe?g|webp|html|svg|((o|t)tf)|woff2?|ico)$':
         expect.stringContaining('mocks/file.js'),
@@ -78,8 +90,6 @@ describe('jest-preset-ns', () => {
     testRegex: [],
     testRunner: 'jest-circus/runner',
     testSequencer: '@jest/test-sequencer',
-    testURL: 'http://localhost',
-    timers: 'real',
     transform: {
       '^.+\\.(js|jsx|mjs)$': expect.stringContaining('transforms/babel.js'),
       '^.+\\.(gql|graphql)$': expect.stringContaining('transforms/graphql.js'),

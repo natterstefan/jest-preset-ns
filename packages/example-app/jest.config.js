@@ -10,7 +10,6 @@ module.exports = {
   preset: 'jest-preset-ns/presets/default',
   displayName: pack.name,
   modulePaths: ['<rootDir>'],
-  name: pack.name,
   rootDir: '.',
   setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
 }
