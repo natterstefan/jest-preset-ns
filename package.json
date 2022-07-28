@@ -14,8 +14,8 @@
     "prelerna:publish": "copyfiles LICENSE README.md packages/jest-preset-ns/",
     "test": "FORCE_COLOR=1 turbo run test --parallel --no-cache",
     "test:app": "FORCE_COLOR=1 turbo run test --parallel --no-cache --scope=example-app*",
-    "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
-    "lerna:publish": "lerna publish from-package"
+    "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog --no-private",
+    "lerna:publish": "lerna publish from-package --no-private"
   },
   "workspaces": {
     "packages": [
@@ -49,7 +49,7 @@
     "husky": "8.0.1",
     "is-ci": "3.0.1",
     "jest": "28.1.3",
-    "lerna": "4.0.0",
+    "lerna": "5.3.0",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "react": "17.0.2",
