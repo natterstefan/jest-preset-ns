@@ -12,7 +12,10 @@ const jestReactConfig = {
   },
   snapshotSerializers: ['enzyme-to-json/serializer'],
   setupFilesAfterEnv: [require.resolve('../../../presets/react/jest-setup.js')],
-  // TODO: use testEnvironment: 'jest-environment-jsdom-global' instead?
+  /**
+   * Alternative:
+   * @see {@link https://www.npmjs.com/package/jest-environment-jsdom-global jest-environment-jsdom-global}
+   */
   testEnvironment: 'jest-environment-jsdom',
 }
 

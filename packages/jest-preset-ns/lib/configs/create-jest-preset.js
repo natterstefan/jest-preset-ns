@@ -63,7 +63,6 @@ const jestPresetConfig = {
   testEnvironment: 'node',
   testMatch: [
     ...jestConfig.defaults.testMatch,
-    // add typescript support
     '**/__tests__/**/*.[jt]s(x)?',
     '**/?(*.)+(spec|test).[jt]s(x)?',
   ],
