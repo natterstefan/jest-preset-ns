@@ -1,5 +1,4 @@
 /* eslint-disable global-require */
-
 const semver = require('semver')
 const colors = require('colors')
 const reactVersion = require('react/package.json').version

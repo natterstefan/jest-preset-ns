@@ -19,7 +19,7 @@ module.exports = babelJest.createTransformer({
         modules: 'commonjs',
         useBuiltIns: 'usage',
         // keep in sync with version in package.json
-        corejs: '3.21',
+        corejs: '3.24.0',
         // compile against the current node version
         targets: { node: 'current' },
       },
