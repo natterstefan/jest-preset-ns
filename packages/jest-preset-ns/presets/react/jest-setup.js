@@ -1,4 +1,5 @@
 /* eslint-disable global-require */
+
 const semver = require('semver')
 const colors = require('colors')
 const reactVersion = require('react/package.json').version
@@ -22,3 +23,11 @@ if (semver.lt(reactVersion, '18.0.0')) {
 
   configure({ adapter: new Adapter() })
 }
+
+/**
+ * Custom jest matchers to test the state of the DOM
+ *
+ * @see https://github.com/testing-library/jest-dom
+ * @see https://www.carlrippon.com/using-jest-and-rtl-with-react-typescript/
+ */
+require('@testing-library/jest-dom')
