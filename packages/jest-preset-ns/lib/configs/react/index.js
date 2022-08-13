@@ -8,15 +8,18 @@ const createPreset = require('../create-jest-preset')
  */
 const jestReactConfig = {
   moduleNameMapper: {
-    '\\.(css|scss)$': 'identity-obj-proxy',
+    '\\.(css|sass|less|scss)$': 'identity-obj-proxy',
   },
   snapshotSerializers: ['enzyme-to-json/serializer'],
   setupFilesAfterEnv: [require.resolve('../../../presets/react/jest-setup.js')],
   /**
-   * Alternative:
-   * @see {@link https://www.npmjs.com/package/jest-environment-jsdom-global jest-environment-jsdom-global}
+   * Docs
+   * @see https://www.npmjs.com/package/jest-environment-jsdom
+   *
+   * Alternative
+   * @see https://www.npmjs.com/package/jest-environment-jsdom-global
    */
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jsdom',
 }
 
 const config = createPreset(jestReactConfig)
