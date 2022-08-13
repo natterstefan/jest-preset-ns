@@ -1,28 +1,25 @@
 const createPreset = require('../create-jest-preset')
 
 /**
+ * Inspired by
+ * @see https://github.com/americanexpress/amex-jest-preset-react/tree/61ae3106b8ae3483b8953b01fc32d70660af6688
+ *
  * @type {import('@jest/types').Config.InitialOptions}
  */
 const jestReactConfig = {
   moduleNameMapper: {
-    '\\.(css|scss)$': 'identity-obj-proxy',
+    '\\.(css|sass|less|scss)$': 'identity-obj-proxy',
   },
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  /**
-   * TODO: setupFilesAfterEnv was not working properly.
-   *
-   * It always threw the missing enzyme adapter error. One must add it
-   * manually right now.
-   *
-   * Find out what eg. amex-jest-preset-react does differently:
-   * @see https://github.com/americanexpress/amex-jest-preset-react/tree/v6.0.0
-   *
-   * This did not work as well:
-   * setupFilesAfterEnv: ['jest-preset-ns/presets/react/jest-setup.js'],
-   */
   setupFilesAfterEnv: [require.resolve('../../../presets/react/jest-setup.js')],
-  // TODO: use testEnvironment: 'jest-environment-jsdom-global' instead?
-  testEnvironment: 'jest-environment-jsdom',
+  /**
+   * Docs
+   * @see https://www.npmjs.com/package/jest-environment-jsdom
+   *
+   * Alternative
+   * @see https://www.npmjs.com/package/jest-environment-jsdom-global
+   */
+  testEnvironment: 'jsdom',
 }
 
 const config = createPreset(jestReactConfig)

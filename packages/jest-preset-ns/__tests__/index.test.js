@@ -114,13 +114,13 @@ describe('jest-preset-ns', () => {
     expect(presetReact).toStrictEqual(
       merge({}, defaultPreset, {
         moduleNameMapper: {
-          '\\.(css|scss)$': 'identity-obj-proxy',
+          '\\.(css|sass|less|scss)$': 'identity-obj-proxy',
         },
         setupFilesAfterEnv: [
           expect.stringContaining('presets/react/jest-setup.js'),
         ],
         snapshotSerializers: ['enzyme-to-json/serializer'],
-        testEnvironment: 'jest-environment-jsdom',
+        testEnvironment: 'jsdom',
       }),
     )
   })
