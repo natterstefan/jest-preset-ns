@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v2.1.1 (2022-08-14)
+
+#### :bug: Bug Fix
+
+- `jest-preset-ns`
+  - removed enzyme warning log in jest-setup (react)
+    ([@natterstefan](https://github.com/natterstefan))
+
+#### Committers: 1
+
+- Stefan Natter ([@natterstefan](https://github.com/natterstefan))
+
 ## v2.1.0 (2022-08-14)
 
 #### :rocket: New Feature
