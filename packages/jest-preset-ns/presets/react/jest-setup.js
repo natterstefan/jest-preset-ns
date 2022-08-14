@@ -3,14 +3,12 @@ const semver = require('semver')
 const colors = require('colors')
 const reactVersion = require('react/package.json').version
 
+/**
+ * ATTENTION: The support for enzyme will be removed in the next major version!
+ * Visit https://github.com/natterstefan/jest-preset-ns/issues/61 for more
+ * details.
+ */
 if (semver.lt(reactVersion, '18.0.0')) {
-  // eslint-disable-next-line no-console
-  console.log(
-    colors.red(
-      'ATTENTION: Enzyme is deprecated and its support will be removed in the next major version! Visit https://github.com/natterstefan/jest-preset-ns/issues/61 for more details.',
-    ),
-  )
-
   const { configure } = require('enzyme')
   /**
    * unofficial React@17 adapter, until the offical one is released
