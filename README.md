@@ -1,7 +1,7 @@
 # jest-preset-ns
 
 [![npm version](https://badge.fury.io/js/jest-preset-ns.svg)](https://badge.fury.io/js/jest-preset-ns)
-[![Build Status](https://travis-ci.com/natterstefan/jest-preset-ns.svg?branch=main)](https://travis-ci.com/natterstefan/jest-preset-ns)
+[![Node CI](https://github.com/natterstefan/jest-preset-ns/actions/workflows/ci.yml/badge.svg)](https://github.com/natterstefan/jest-preset-ns/actions/workflows/ci.yml)
 
 An opinionated
 [Jest preset](https://facebook.github.io/jest/docs/configuration.html#preset-string)
