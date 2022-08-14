@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v2.1.0 (2022-08-14)
+
+#### :rocket: New Feature
+
+- `jest-preset-ns`
+  - [#62](https://github.com/natterstefan/jest-preset-ns/pull/62) feat: marked
+    enzyme as deprecated and added @testing-library/\* to jest.setup
+    ([@natterstefan](https://github.com/natterstefan))
+
+#### Committers: 1
+
+- Stefan Natter ([@natterstefan](https://github.com/natterstefan))
+
 ## v2.0.0 (2022-07-28)
 
 #### :rocket: New Feature
