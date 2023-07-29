@@ -22,14 +22,14 @@ jobs:
       matrix:
         node-version: [18, 20]
     steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9
 
-      - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
+      - uses: actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
+      - uses: bahmutov/npm-install@c5482d70ec8706408996e31ac94075030694993f
         with:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent

@@ -1,26 +1,43 @@
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: github-actions
+    reviewers:
+      - natterstefan
+    directory: "/"
     schedule:
-      interval: 'monthly'
+      interval: "weekly"
+      # Check for npm updates on Mondays
+      day: "monday"
+      # Check for npm updates at 3am UTC
+      time: "03:00"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
     commit-message:
-      prefix: 'chore'
-  - package-ecosystem: 'npm'
-    directory: '/packages/example-app'
+      prefix: "chore"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'monthly'
+      interval: "monthly"
     commit-message:
-      prefix: 'chore'
-  - package-ecosystem: 'npm'
-    directory: '/packages/example-app-react'
+      prefix: "chore"
+  - package-ecosystem: "npm"
+    directory: "/packages/example-app"
     schedule:
-      interval: 'monthly'
+      interval: "monthly"
     commit-message:
-      prefix: 'chore'
-  - package-ecosystem: 'npm'
-    directory: '/packages/jest-preset-ns'
+      prefix: "chore"
+  - package-ecosystem: "npm"
+    directory: "/packages/example-app-react"
     schedule:
-      interval: 'monthly'
+      interval: "monthly"
     commit-message:
-      prefix: 'chore'
+      prefix: "chore"
+  - package-ecosystem: "npm"
+    directory: "/packages/jest-preset-ns"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "chore"
