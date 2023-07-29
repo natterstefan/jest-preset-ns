@@ -1,5 +1,9 @@
 const Enzyme = require('enzyme')
 
+jest.mock('react/package.json', () => ({
+  version: '17.0.0',
+}))
+
 describe('jest-preset-ns/presets/react', () => {
   const spy = jest.spyOn(Enzyme, 'configure')
 
