@@ -3,7 +3,9 @@ const semver = require('semver')
 const reactVersion = require('react/package.json').version
 
 /**
- * ATTENTION: The support for enzyme will be removed in the next major version!
+ * ATTENTION: The support for enzyme will be removed in one of the  next major
+ * versions!
+ *
  * Visit https://github.com/natterstefan/jest-preset-ns/issues/61 for more
  * details.
  */
