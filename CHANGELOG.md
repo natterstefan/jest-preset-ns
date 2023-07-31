@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v3.0.0 (2023-07-31)
+
+#### :rocket: New Feature
+
+- `example-app-react`, `example-app`, `jest-preset-ns`
+  - [#118](https://github.com/natterstefan/jest-preset-ns/pull/118) feat:
+    updated dependencies, incl. min required Jest version 29
+    ([@natterstefan](https://github.com/natterstefan))
+  - [#109](https://github.com/natterstefan/jest-preset-ns/pull/109) feat: min.
+    required node version >=18
+    ([@natterstefan](https://github.com/natterstefan))
+
+#### Committers: 1
+
+- Stefan Natter ([@natterstefan](https://github.com/natterstefan))
+
 ## v2.2.0 (2022-10-26)
 
 #### :rocket: New Feature
