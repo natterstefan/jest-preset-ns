@@ -61,6 +61,7 @@ describe('jest-preset-ns', () => {
     noStackTrace: false,
     notify: false,
     notifyMode: 'failure-change',
+    openHandlesTimeout: 1000,
     passWithNoTests: false,
     prettierPath: 'prettier',
     resetMocks: false,
@@ -73,6 +74,10 @@ describe('jest-preset-ns', () => {
     setupFilesAfterEnv: [],
     skipFilter: false,
     slowTestThreshold: 5,
+    snapshotFormat: {
+      escapeString: false,
+      printBasicPrototype: false,
+    },
     snapshotSerializers: [],
     testEnvironment: 'node',
     testEnvironmentOptions: {},
@@ -100,6 +105,7 @@ describe('jest-preset-ns', () => {
     watch: false,
     watchPathIgnorePatterns: [],
     watchman: true,
+    workerThreads: false,
   }
 
   it('should export jest-preset.js', () => {

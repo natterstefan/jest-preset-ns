@@ -27,11 +27,11 @@ if (!jestConfig) {
   )
 }
 
-if (semver.lt(jestVersion, '28.0.0')) {
+if (semver.lt(jestVersion, '29.0.0')) {
   // eslint-disable-next-line no-console
   console.log(
     colors.red(
-      'Error: You are using an unsupported version of Jest! Please upgrade to Jest v28.',
+      'Error: You are using an unsupported version of Jest! Please upgrade to Jest v29.',
     ),
   )
 }
